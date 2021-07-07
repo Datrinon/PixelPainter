@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    background-color: rgb(36, 34, 32);
+    color: white;
+}
+
+#title {
+    font-family: "Press Start 2P", Roboto, Helvetica, sans-serif;
+    font-size: 2.5em;
+    letter-spacing: 0.05em;
+    background             : -webkit-linear-gradient(rgb(187, 25, 93), rgb(255, 162, 40));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+#grid-size-options {
+    display: inline;
+}
+
+.disabled {
+    visibility: hidden;
+}
+
+.grid-cell {
+    border: 1px dotted rgba(164, 221, 231, 0.658);
+}
+
+.grid-cell-disable {
+    border: unset;
+}
+
+.grid-cell:hover {
+    border: 5px dotted rgba(19, 44, 54, 0.76);
+}
+
+#sketchboard {
+    display: block;
+    margin: 0 auto;
+    width: max-content;
+    height: max-content;
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: repeat(32, 0.8em);
+    grid-template-rows: repeat(32, 0.8em);
+    user-select     : none;
+    cursor          : crosshair;
+    background-color: white;
+}
+
+.colored {
+    background-color: black;
+}
+
+#instructions > p > span {
+    position: relative;
+    top: 2.5px;
+    left: 1.5px;
+}
+
+kbd {
+    background-color: rgb(70, 190, 255);
+    border-radius: 3px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .2), 0 2px 0 0 rgba(40, 255, 173, 0.705) inset;
+    color: #333;
+    display: inline-block;
+    font-size: .85em;
+    font-weight: 700;
+    line-height: 1;
+    padding: 2px 4px;
+    white-space: nowrap;
+}
+
+#controls {
+    border: 1px solid black;
+    width: fit-content;
+    margin: 15px auto;
+    padding: 15px 0px 5px 0;
+    border-radius: 5px;
+    background-color:rgb(17, 16, 15);
+    user-select     : none;
+}
+
+#toolbar {
+    margin: 0 auto;
+}
+
+#toolbar-canvas-size {
+    display: block;
+    /* border: 2px solid cyan; */
+    padding-top: 15px;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+
+#toolbar-canvas-size label{
+    text-align: center;
+    display:block;
+}
+
+#toolbar-canvas-size input {
+    width: 15rem;
+    margin-left: 5rem;
+}
+
+#grid-size-controller {
+    position: relative;
+    top: 5px;
+}
+
+#controls button {
+    padding: 3px 6px 6px 4px;
+    background-color: rgba(24, 24, 24, 0.822);
+    border: 1px solid rgba(0,0,0,0);
+    color: white;
+    font-family: inherit;
+    height: 2em;
+    border-radius: 5px;
+    transition: border 0.3s, background-color 0.15s;
+}
+
+#controls button:hover {
+    border: 1px solid rgb(95, 210, 255);
+}
+
+#controls button:disabled {
+    background-color: rgba(34, 119, 168, 0.733);
+    border: 1px solid white;
+}
+
+#controls button:active {
+    background-color: rgb(83, 156, 199) !important;
+}
+
+.button-toggle {
+    border: 1px solid rgb(95, 210, 255);
+    background-color: rgb(160, 220, 255) !important;
+}
+
+#control button:focus {
+    background-color: rgba(34, 119, 168, 0.733);
+}
+
+#grid-size {
+    font-weight: bold;
+}
+
+#grid-size-options{
+    width: 25%;
+}
+
+#warning {
+    position: relative;
+    border: 1px solid orange;
+    margin: 0 auto;
+    display: block;
+    width: fit-content;
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+#warning::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 14px solid orange;
+    top: -15px;
+    left: 212px;
+    background: none;
+}
+
+#color-picker {
+    padding: 0;
+    background-color: unset;
+    border: unset;
+    color: unset;
+    width: 2.5em;
+    height: 2.0em;
+    position: relative;
+    top: 0.5em;
+}
+
+#save {
+    position: relative;
+}
+
+#save-btn {
+    margin: 0 25%;
+    background-color: rgb(62, 148, 148) !important;
+}
+
+#save-msg {
+    font-size: 0.80em;
+    position: absolute;    
+    right: 10em;
+    color: rgb(0,0,0,0);
+}
+
+.save-successful {
+    animation: fadeInAndOut 1s;
+}
+
+@keyframes fadeInAndOut {
+    0% {
+        color: rgb(70, 255, 14, 1.0);
+
+    }
+    90% {
+        color: rgb(70, 255, 14, 1.0);
+    }
+    100% {
+        color:rgb(0,0,0,0);
+    }
+}

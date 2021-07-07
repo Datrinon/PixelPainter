@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Etch &amp; Sketch!</title>
+        <link rel="stylesheet" href="etchandsketch.css">
+    </head>
+    <body>
+        <header>
+            <h1 id="title">Pixel Painter</h1>
+            <div id="instructions">
+                <p>Click within the canvas to draw.</p>
+            </div>
+        </header>
+        <main>
+            <section id="etch-panel">
+                <section id="sketchboard">
+                </section>
+                <section id="controls">
+                    <div id="toolbar">
+                        <input type="color" id="color-picker" value="#000000"/>
+                        <button class="tool" data-key="66" id="brush" disabled><kbd>B</kbd> Brush</button>
+                        <button class="tool" data-key="69" id="eraser"><kbd>E</kbd> Eraser</button>
+                        <button class="tool" data-key="73" id="eyedropper"><kbd>I</kbd> Eyedropper</button>
+                        <br/>
+                        <button id="hide-grid">Toggle Grid</button>
+                        <button id="rainbow-mode">Rainbow Mode</button>
+                        <button id="reset" >Wipe Canvas</button>
+                    </div>
+                    <div id="toolbar-canvas-size">
+                        <label for="grid-size-controller">
+                            Canvas Size
+                        </label>
+                        <!-- Use slider but don't use tick marks or verticals. -->
+                        <input id="grid-size-controller" type="range"
+                        min="4" max="100" value="32" step="4">
+                        <span id="grid-size"></span>
+                        <div id="grid-size-options" class="disabled">
+                            <button id="ok">OK</button>
+                            <button id="revert">Cancel</button>
+                            <p id="warning">Warning! Reducing the canvas will cut off drawings by the edges.</p>
+                        </div>
+                    </div>
+                    <div id="save">
+                        <button id="save-btn">Save Session</button>
+                        <span id="save-msg">✔ Saved!</span>
+                    </div>
+                </section>
+            </section>
+        </main>
+    </body>
+    <script src="utility.js"></script>
+    <script src="etch.js"></script>
+</html>
