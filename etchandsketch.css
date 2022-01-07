@@ -124,6 +124,10 @@ kbd {
     transition: border 0.3s, background-color 0.15s;
 }
 
+#toolbar #reset {
+    color: red;
+}
+
 #controls button:hover {
     border: 1px solid rgb(95, 210, 255);
 }
